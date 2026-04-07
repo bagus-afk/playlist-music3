@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+  <title>latian css</title>
+</head>
+<body>
+<header class="letter">
+  <h1 style=margin-bottom:10px>music playlist</h1>
+  <h6 style=margin-top:10px>by: tiyar raja html</h6>
+</header>
+
+<div class="kotak">
+  <!--KOTA INI TAK SAMA TANPAMU-->
+  <div class="card">
+    <h3 style="font-style:italic; text-align:center; font-size:25px; text-shadow: 3px 5px 10px; margin-bottom:20px; margin-top:5px">kota ini tak sama tanpamu</h3>
+    <video width=300px id=videoKu muted>
+      <source src="kota ini tak sama tanpamu.mp4">
+    </video>
+    <audio id=musik controls>
+    <source src="kota ini tak sama tanpamu.mp3">
+    </audio>
+  </div>
+  <!--MONOLOG-->
+  <div class="card">
+    <h3 style="font-style:italic; text-align:center; font-size:25px; text-shadow: 3px 5px 10px; margin-bottom:20px; margin-top:5px">monolog</h3>
+    <video width=300 id=videoKu2 muted>
+      <source src="monolog.mp4">
+    </video>
+    <audio id=musik2 controls>
+      <source src="monolog.mp3">
+    </audio>
+  </div>
+  <!--LANTAS-->
+   <div class="card">
+    <h3 style="font-style:italic; text-align:center; font-size:25px; text-shadow: 3px 5px 10px; margin-bottom:20px; margin-top:5px">lantas</h3>
+    <video width=250px height="250" id=videoKu3 muted>
+      <source src="lantas.mp4">
+    </video>
+    <audio id=musik3 controls>
+    <source src="lantas fix.mp3">
+    </audio>
+  </div>
+  <!--saat bahagia-->
+   <div class="card">
+    <h3 style="font-style:italic; text-align:center; font-size:25px; text-shadow: 3px 5px 10px; margin-bottom:20px; margin-top:5px">saat bahagia</h3>
+    <video width=250px height=250px id=videoKu4 muted>
+      <source src="saat bahagia.mp4">
+    </video>
+    <audio id=musik4 controls>
+    <source src="kuyakin tak ada satupun.mp3">
+    </audio>
+  </div>
+  <!--somebody pleasure-->
+   <div class="card">
+    <h3 style="font-style:italic; text-align:center; font-size:25px; text-shadow: 3px 5px 10px; margin-bottom:20px; margin-top:5px">somebody pleasure</h3>
+    <video width=250px height=250px id=videoKu5 muted>
+      <source src="somebody pleasure.mp4">
+    </video>
+    <audio id=musik5 controls>
+    <source src="somebody pleasure.mp3">
+    </audio>
+  </div>
+  <!--sempurna-->
+   <div class="card">
+    <h3 style="font-style:italic; text-align:center; font-size:25px; text-shadow: 3px 5px 10px; margin-bottom:20px; margin-top:5px">sempurna</h3>
+    <video width=320px  id=videoKu6 muted>
+      <source src="sempurna.mp4">
+    </video>
+    <audio id=musik6 controls>
+    <source src="sempurna.mp3">
+    </audio>
+  </div>
+</div>
+
+<style>
+  .letter {
+    color:#f3ff05;
+    font-family: 'Arial';
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 3px 5px 10px;
+  }
+  body {
+    background-color: #cf47d6;
+  }
+  
+  .kotak {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding:20px;
+  }
+  .card {
+    width: 320px;
+    height: 400px;
+    background:white;
+    border-radius: 15px;
+    padding:10px;
+    flex-shrink: 0;
+    box-shadow: 5px 10px 20px;
+    align-items: center;
+  }
+  video {
+    border-radius:15px;
+    box-shadow:5px 15px 40px;
+    margin-bottom:25px;
+  }
+  audio {
+    border-radius:15px;
+    box-shadow:3px 5px 10px;
+  }
+</style>
+
+<script>
+const audio = document.getElementById("musik");
+const video = document.getElementById("videoKu");
+
+const audio2 = document.getElementById("musik2");
+const video2 = document.getElementById("videoKu2");
+
+const audio3 = document.getElementById("musik3");
+const video3 = document.getElementById("videoKu3");
+
+const audio4 = document.getElementById("musik4");
+const video4 = document.getElementById("videoKu4");
+
+const audio5 = document.getElementById("musik5");
+const video5 = document.getElementById("videoKu5");
+
+const audio6 = document.getElementById("musik6");
+const video6 = document.getElementById("videoKu6");
+
+audio.onplay = function() {
+  video.play();
+  video2.pause();
+  audio2.pause();
+  video3.pause();
+  audio3.pause();
+  video4.pause();
+  audio4.pause();
+  video5.pause();
+  audio5.pause();
+  video6.pause();
+  audio6.pause();
+}
+audio.onpause = function() {
+  video.pause();
+}
+
+audio2.onplay = function() {
+  video2.play();
+  video.pause();
+  audio.pause();
+  video3.pause();
+  audio3.pause();
+  video4.pause();
+  audio4.pause();
+  video5.pause();
+  audio5.pause();
+  video6.pause();
+  audio6.pause();
+}
+audio2.onpause = function() {
+  video2.pause();
+}
+
+audio3.onplay = function() {
+  video3.play();
+  video.pause();
+  audio.pause();
+  video2.pause();
+  audio2.pause();
+  video5.pause();
+  audio5.pause();
+  video4.pause();
+  audio4.pause();
+  video6.pause();
+  audio6.pause();
+}
+audio3.onpause = function() {
+  video3.pause();
+}
+
+audio4.onplay = function() {
+  video4.play();
+  video.pause();
+  audio.pause();
+  video2.pause();
+  audio2.pause();
+  video3.pause();
+  audio3.pause();
+  video5.pause();
+  audio5.pause();
+  video6.pause();
+  audio6.pause();
+}
+audio4.onpause = function() {
+  video4.pause();
+}
+
+audio5.onplay = function() {
+  video5.play();
+  video.pause();
+  audio.pause();
+  video2.pause();
+  audio2.pause();
+  video3.pause();
+  audio3.pause();
+  video4.pause();
+  audio4.pause();
+  video6.pause();
+  audio6.pause();
+}
+audio5.onpause = function() {
+  video5.pause();
+}
+
+audio6.onplay = function() {
+  video6.play();
+  video.pause();
+  audio.pause();
+  video2.pause();
+  audio2.pause();
+  video3.pause();
+  audio3.pause();
+  video4.pause();
+  audio4.pause();
+  video5.pause();
+  audio5.pause();
+}
+</script>
+<br><br><br>
+<h5 style="margin-bottom:0px; text-align:center">kalau ada masalah bilang yaa
+ke nomer wa: <a href=https://wa.me/+6285608041372>+6285608041372</a></h5>
+</body>
+</html>
